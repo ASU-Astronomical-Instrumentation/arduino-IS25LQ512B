@@ -19,8 +19,6 @@ public:
      * @brief 
      * 
      */
-    flash(/* args */);
-    ~flash();
     int begin(uint8_t LEPIN);
 
     //note that addr range for this chip is 0x00_00_00 - 0x00_FF_FF
@@ -31,13 +29,6 @@ public:
     int load(void *buff, size_t size, uint32_t address); 
 };
 
-flash::flash(/* args */)
-{
-}
-
-flash::~flash()
-{
-}
 
 
 #endif
