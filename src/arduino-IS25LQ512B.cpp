@@ -39,7 +39,7 @@ uint8_t flash::getStatus(){
 }
 uint32_t flash::getChipInfo(){
     uint32_t info = 0;
-    uint8_t b[] = {0x9F, 0x00, 0x00, 0x00};
+    uint8_t b[] = {CMD_JEDEC, 0x00, 0x00, 0x00};
     this->spi_txn(b, 4);
     info = 0x000000 | b[1] << 16 | b[2] << 8 | b[3];
     return info;
